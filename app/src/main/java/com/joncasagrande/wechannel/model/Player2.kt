@@ -8,8 +8,9 @@ class Player2(val id:String, val name: String,val  thumbnail: Int) : WeChannel{
         return thumbnail
     }
 
-    override fun playChannel(): View {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun playChannel(): View? {
+        return null
+
     }
 
 }

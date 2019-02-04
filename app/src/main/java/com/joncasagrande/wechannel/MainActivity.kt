@@ -5,8 +5,9 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import com.joncasagrande.wechannel.model.Player1
 import com.joncasagrande.wechannel.model.Player2
-import com.joncasagrande.wechannel.model.WeChannel
 import com.joncasagrande.wechannel.recyclerView.ChannelRecyclerView
+import com.joncasagrande.wechannel.util.channel1
+import com.joncasagrande.wechannel.util.channel2
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -17,13 +18,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        channelRecyclerViewAdapter = ChannelRecyclerView(this, arrayListOf(Player1("","",""), Player2("","","")))
+        channelRecyclerViewAdapter = ChannelRecyclerView(this, arrayListOf(Player1(channel1,"Channel 1",R.drawable.channel1), Player2(channel2,"Channel 2",R.drawable.channel2)))
 
-        val channelLayout = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        val channelLayout = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         RVchannel.layoutManager = channelLayout
         RVchannel.adapter = channelRecyclerViewAdapter
-
-
 
     }
 }

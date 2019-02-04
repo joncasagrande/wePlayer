@@ -4,6 +4,6 @@ import android.view.View
 
 
 interface WeChannel{
-    fun playChannel() : View
+    fun playChannel() : View?
     fun getChannelDisplay(): Int
 }

@@ -1,5 +1,6 @@
 package com.joncasagrande.wechannel.strategy
 
+import com.joncasagrande.wechannel.R
 import com.joncasagrande.wechannel.model.Player1
 import com.joncasagrande.wechannel.model.Player2
 import com.joncasagrande.wechannel.model.WeChannel
@@ -10,10 +11,10 @@ class WeChannelStrategy {
 
     fun createPlayer(channelId: String): WeChannel{
         when(channelId){
-            channel1 -> return Player1("","","")
-            channel2 -> return Player2("","","")
+            channel1 -> return Player1("","", R.drawable.channel1)
+            channel2 -> return Player2("","",R.drawable.channel2)
             else -> {
-                return Player1("","","")
+                return Player1("","",R.drawable.channel1)
             }
         }
     }

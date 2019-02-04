@@ -8,8 +8,8 @@ class Player1(val id:String,val  name: String, val thumbnail: Int) : WeChannel{
         return thumbnail
     }
 
-    override fun playChannel(): View {
-
+    override fun playChannel(): View? {
+        return null
     }
 
 

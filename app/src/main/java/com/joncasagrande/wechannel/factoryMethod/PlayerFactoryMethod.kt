@@ -6,7 +6,7 @@ import com.joncasagrande.wechannel.model.WeChannel
 
 class PlayerFactoryMethod{
 
-    fun play(channelId: String):View{
+    fun play(channelId: String): View? {
         val weChannel: WeChannel = WeChannelStrategy().createPlayer(channelId)
 
         return weChannel.playChannel()
